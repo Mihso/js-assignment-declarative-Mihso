@@ -46,7 +46,7 @@ const baseSum = items => sum(prices(items));
 // taxSum: (items: [{price: number, taxable: boolean}], tax: number) -> number
 const taxSum = (items, tax) => sum(applyTax(prices(selectTaxable(items)), tax));
 
-// calculateTotalDeclarative: (items: [{price: number, taxable: booleam}], tax: number) -> number
+// calculateTotalDeclarative: (items: [{price: number, taxable: boolean}], tax: number) -> number
 const calculateTotalDeclarative = (items, tax) =>
   baseSum(items) + taxSum(items, Math.abs(tax));
 
